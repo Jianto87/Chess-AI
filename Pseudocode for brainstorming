@@ -1,0 +1,41 @@
+1)
+
+Loop through all moves
+
+  Play move
+
+  move_score = - Opponent's_best_move_score
+    
+  if ( move_score > best_move_score ) then ( best_move = move )
+    
+  Undo Move
+  
+End of Loop
+
+2)
+
+(Set depth initially to required value)
+
+SEARCHING_FUNCTION {
+
+  Decrease depth by 1
+
+  Loop through all moves
+
+    Play move
+  
+    if ( depth = 0 ) move_score = static_position_score
+    else move_score = - Opponent's_best_move_score
+    
+    if ( move_score > best_move_score ) then ( best_move = move )
+    
+    Undo Move
+ 
+  End of Loop
+
+  Return best_move_score
+
+} END
+
+3)
+
